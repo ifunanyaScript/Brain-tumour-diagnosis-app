@@ -15,7 +15,7 @@ tf.get_logger().setLevel("ERROR")
 app = FastAPI()
 
 # Constants
-MODEL = tf.keras.models.load_model(r"C:/Users/ifunanyaScript/Everything/BrainTumour_DiagnosisApp/saved_models/multiclass_model")
+MODEL = tf.keras.models.load_model(r"C:/Users/ifunanyaScript/Everything/BrainTumour_DiagnosisApp/saved_models/2")
 LABELS = ['no_tumour', 'tumour']
 
 
