@@ -6,4 +6,4 @@ Due to Github's 1000 files policy, I did not upload the entire dataset in this r
 
 
 #### Model building
-A 6 layers deep CNN was built
+It's a normal custom when buillding CNN models, to build and train several versions for quality and testing purposes
