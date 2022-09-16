@@ -6,4 +6,5 @@ Due to Github's 1000 files policy, I did not upload the entire dataset in this r
 
 
 #### Model building
-It's a normal custom when buillding CNN models, to build and train several versions for quality and testing purposes
+It's a normal custom when buillding CNN models, to build and train several versions for quality and testing purposes. In this case I created two versions of the model.<br>
+The first model was built as a binary classification. The output layer has one neuron activated by a sigmoid function. The model is....
