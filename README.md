@@ -5,4 +5,5 @@ The dataset consist of 3000 images of Brain MRI scans; 1500 images each for tumo
 Due to Github's 1000 files policy, I did not upload the entire dataset in this repository. However if you wish to procure the dataset you can find it [here](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection)
 
 
-__Model building__
+#### Model building
+A 6 layers deep CNN was built
