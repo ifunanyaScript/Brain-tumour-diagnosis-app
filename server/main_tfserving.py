@@ -1,3 +1,4 @@
+# Import all necessary packages
 import json
 from urllib import response
 from fastapi import FastAPI, UploadFile, File
@@ -14,9 +15,10 @@ import cv2
 absl.logging.set_verbosity(absl.logging.ERROR)
 tf.get_logger().setLevel("ERROR")
 
-# Instantiate fastapi server
+# Instantiate fastapi server.
 app = FastAPI()
 
+# This is the tfserving link, We'll call the predict function of the model through this link. 
 endpoint = "http://localhost:8501/v1/models/brain_tumour:predict"
 
 # Constants
@@ -48,7 +50,7 @@ async def clasify(file: UploadFile = File(...)):
     prediction = response.json()["predictions"][0]
 
     predicted_label = LABELS[np.argmax(prediction)]
-    confidence = np.round(np.max(prediction), 2)
+    confidence = str(np.round(100 * np.max(prediction), 2)) + "%"
 
     return {
         "label": predicted_label,
@@ -57,3 +59,5 @@ async def clasify(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     uvicorn.run(app, host='localhost', port=8000)
+
+# ifunanyaScript
