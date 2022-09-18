@@ -1,6 +1,5 @@
 # Import all necessary packages
 import json
-from urllib import response
 from fastapi import FastAPI, UploadFile, File
 import uvicorn
 import requests
@@ -18,17 +17,16 @@ tf.get_logger().setLevel("ERROR")
 # Instantiate fastapi server.
 app = FastAPI()
 
-# This is the tfserving link, We'll call the predict function of the model through this link. 
-endpoint = "http://localhost:8501/v1/models/brain_tumour:predict"
-
-# Constants
-# MODEL = tf.keras.models.load_model(r"C:/Users/ifunanyaScript/Everything/BrainTumour_DiagnosisApp/saved_models/2")
 LABELS = ['no_tumour', 'tumour']
 
+# This is the tf_serving link, We'll call the predict function of the model through this link. 
+endpoint = "http://localhost:8501/v1/models/brain_tumour:predict"
 
-# @app.get("/ping")
-# async def ping():
-#     return "Hello, I am alive!!!"
+
+# @app.get("/awake")
+# async def awake():
+#     return "I am awake!!!"
+
 
 def bytes_to_image(bytes) -> np.ndarray:
     image = np.array(Image.open(BytesIO(bytes)))
@@ -36,17 +34,23 @@ def bytes_to_image(bytes) -> np.ndarray:
 
 @app.post("/classify")
 async def clasify(file: UploadFile = File(...)):
+    # file.read returns a byte array which is converted to an image
     image = bytes_to_image(await file.read())
+    # Resize the image because the model expects (224, 224)
     image = cv2.resize(image, (224, 224))
 
     # Create a batch.
     image_batch = np.expand_dims(image, 0)
 
-    json_data = {
+    # Convert image to tf_serving data format.
+    image_data = {
         "instances": image_batch.tolist()
     }
 
-    response = requests.post(endpoint, json=json_data)
+    # tf_serving response.
+    response = requests.post(endpoint, json=image_data)
+
+
     prediction = response.json()["predictions"][0]
 
     predicted_label = LABELS[np.argmax(prediction)]
