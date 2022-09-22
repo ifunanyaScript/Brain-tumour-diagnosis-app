@@ -1,5 +1,6 @@
 # Import necessary packages.
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import absl.logging
 import numpy as np
@@ -15,9 +16,27 @@ tf.get_logger().setLevel("ERROR")
 # Instantiate fastapi server
 app = FastAPI()
 
+# Define links that CORS policy should allow.
+origins = [
+    "http://localhost",
+    "http://localhost:3000"
+]
+
+# Add middlewares to the fastapi instance.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # Constants
-MODEL = tf.keras.models.load_model(r"C:/Users/ifunanyaScript/Everything/BrainTumour_DiagnosisApp/saved_models/2")
-LABELS = ['no_tumour', 'tumour']
+MODEL = tf.keras.models.load_model(r"../saved_models/2")
+
+# Note: This should correspond with the one in the notebooks. 
+LABELS = ['No Tumour', 'Tumour']
 
 
 # @app.get("/awake")
@@ -41,7 +60,7 @@ async def clasify(file: UploadFile = File(...)):
 
     prediction = MODEL.predict(image_batch)
     predicted_label = LABELS[np.argmax(prediction[0])]
-    confidence = round(np.max(prediction[0] * 100), 2)
+    confidence = np.max(prediction[0])
     return {
         "label": predicted_label,
         "confidence": float(confidence)
