@@ -37,7 +37,7 @@ app.add_middleware(
 endpoint = "http://localhost:8501/v1/models/brain_tumour:predict"
 
 # Note: This should correspond with the one in the notebooks. 
-LABELS = ['no_tumour', 'tumour']
+LABELS = ['No Tumour', 'Tumour']
 
 
 # @app.get("/awake")
