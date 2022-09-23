@@ -33,11 +33,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# To server the tensorflow model(s) using tensorflow serving;
+# Visit (https://www.tensorflow.org/tfx/serving/setup) to see how to setup tensorflow serving with Docker Images
+# After opening Docker Desktop and setting up tf serving, run the below line, preferably on Windows Powershell:
+# `docker run -t --rm -p 8501:8501 -v C:/Users/ifunanyaScript/Everything/BrainTumour_DiagnosisApp:/BrainTumour_DiagnosisApp tensorflow/serving --rest_api_port=8501 --model_config_file=/BrainTumour_DiagnosisApp/model_configs/simple.config`
+
 # This is the tf_serving link, We'll call the predict function of the model through this link. 
 endpoint = "http://localhost:8501/v1/models/brain_tumour:predict"
 
 # Note: This should correspond with the one in the notebooks. 
-LABELS = ['No Tumour', 'Tumour']
+LABELS = ['no_tumour', 'tumour']
 
 
 # @app.get("/awake")
