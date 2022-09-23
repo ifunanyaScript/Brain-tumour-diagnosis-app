@@ -18,5 +18,15 @@ Follow the resulting page intuitively.
 After you have installed Node JS and npm, run Mac Terminal or Windows Command Prompt.  
 Change your present working directory to the client folder, then run `npm install --from-lock.json`. 
 
+###### `npm audit fix`
+After all the packages and dependencies have been installed, run `npm audit fix` to fix all vulnerabilities.
 
+###### `npm start`
+After vulnerabilities have been fixed, run `npm start`.  
+The web app will be hosted on localhost:3000 on your machine.  
+<br>
+<br>
+<br>
+<br>
+__NB:__ Start the backend main_server provided [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/server/main_server.py)
 
