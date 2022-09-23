@@ -11,7 +11,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// To measure performance in the app, pass a function to log results 
+// For instance: reportWebVitals(console.log)
+// Or forward to an analytics endpoint. You can learn more -->: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// ifunanyaScript
