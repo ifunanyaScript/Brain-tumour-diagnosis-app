@@ -28,5 +28,5 @@ The web app will be hosted on localhost:3000 on your machine.
 <br>
 <br>
 <br>
-__NB:__ Start the backend main_server provided [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/server/main_server.py)
+__NB:__ Start the backend main_server provided [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/server/main_server.py) to get diagnosis results.
 
