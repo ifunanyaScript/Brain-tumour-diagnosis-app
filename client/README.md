@@ -3,5 +3,20 @@ The folder structure is emulated from [Create React App](https://github.com/face
 <br>
 <br>
 All the code required to succesfully run the web app is provided in this folder.  
-However, there is a caveat; There are packages and dependencies that must be installed to run a react web app.  
-These packages are contained in the [package.json](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/client/package.json) and [package-lock.json](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/client/package-lock.json) files.
+However, there is a caveat; There are packages and dependencies that must be installed to run the web app.  
+These packages are contained in the [package.json](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/client/package.json) and [package-lock.json](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/blob/main/client/package-lock.json) files.  
+
+###### Install Node JS
+Search "Installing Node JS on _name of your machine, e.g Windows 10_" on google.  
+Follow the resulting page intuitively.  
+__NB:___ If you install Node JS using the package installer, it comes directly with npm.
+###### Install npm
+Search "Installing npm on _name of your machine, e.g Windows 10_" on google.  
+Follow the resulting page intuitively.  
+
+###### `npm install --from-lock.json`
+After you have installed Node JS and npm, run Mac Terminal or Windows Command Prompt.  
+Change your present working directory to the client folder, then run `npm install --from-lock.json`. 
+
+
+
