@@ -1,4 +1,4 @@
-// Import 
+// Import necessary packages.
 import { useState, useEffect } from "react";
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
@@ -157,6 +157,7 @@ export const ImageUpload = () => {
   const [isLoading, setIsloading] = useState(false);
   let confidence = 0;
 
+  // This sends the image to the backend server and recieves a response.
   const sendFile = async () => {
     if (image) {
       let formData = new FormData();
@@ -173,6 +174,7 @@ export const ImageUpload = () => {
     }
   }
 
+  // This wipes out everything when the clear button is clicked.
   const clearData = () => {
     setData(null);
     setImage(false);
@@ -213,6 +215,7 @@ export const ImageUpload = () => {
     confidence = (parseFloat(data.confidence) * 100).toFixed(2);
   }
 
+  // This is the entirety of the UI layout.
   return (
     <React.Fragment>
       <AppBar position="static" className={classes.appbar}>
@@ -291,3 +294,5 @@ export const ImageUpload = () => {
     </React.Fragment >
   );
 };
+
+// ifunanyaScript
