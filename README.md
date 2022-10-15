@@ -11,4 +11,10 @@ For this purpose, I trained three CNNs for brain tumour classification.<br>
 The first model was built as a binary classification. The output layer has one neuron activated by a sigmoid function. I stacked 6 concolution layers, one fully connected dense layer and a final output layer. The model achieved 97.70% testing accuracy.<br>
 The second model was built as a multiclass classification. The output layer has 2 neurons activated by a softmax function. I stacked 6 concolution layers, two fully connected dense layer and a final output layer. The model achieved 98.50% testing accuracy.<br> 
 The third CNN was modelled employing __transfer learning__. I employed the __VGG16__ pretrained model weights and designed a new model as a multiclass classification. This model achieved 99% testing accuracy.<br>  
-The notebooks for training these models are available [here](). The trained models were saved and exported and are available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/saved_models)
+The notebooks for training these models are available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/notebooks). The trained models were saved and exported and are available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/saved_models).
+
+
+#### React JS web app
+A react web app for brain tumour classification was developed using these pretrained models.  
+The web app is designed as a drag and drop architecture: You can drag and drop and image of a Brain MRI scan, and readily get a diagnosis result, i.e tumour classification and classification probabilty.<br>. 
+The entire source code used to develop this React web app is available [here]()
