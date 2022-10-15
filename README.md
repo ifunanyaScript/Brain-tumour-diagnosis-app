@@ -15,8 +15,11 @@ The notebooks for training these models are available [here](https://github.com/
 
 
 #### React JS web app
-A react web app for brain tumour classification was developed using these pretrained models.  
+A react web app for brain tumour diagnosis was developed using these pretrained models.  
 The web app is designed as a drag and drop architecture: You can drag and drop and image of a Brain MRI scan, and readily get a diagnosis result, i.e tumour classification and classification probabilty.<br>. 
 The entire source code used to develop this React web app is available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/client).
 
 
+#### React Native mobile app
+A fully functional react native app for brain tumour diagnosis.
+This mobile app is a step up of the web app. It also adopts a similar architecture
