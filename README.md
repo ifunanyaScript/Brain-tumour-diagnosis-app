@@ -29,4 +29,4 @@ Using the mobile phone's camera, one can take a picture of a brain MRI scan and 
 The source codes used to develop this React Native mobile app is available [here]().<br>  
 <br>
 
-Feel free to fork this repo and drop a star on your way out. Thanks! 😀.
+Feel free to fork this repo and drop a ⭐star on your way out. Thanks! 😀.
