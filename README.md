@@ -1,11 +1,11 @@
 # Brain-tumour-diagnosis-app
 
-#### The Data
+### The Data
 The dataset consist of 3000 images of Brain MRI scans; 1500 images each for tumour and no-tumour.  
 Due to Github's 1000 files policy, I did not upload the entire dataset in this repository. However if you wish to procure the dataset you can find it [here](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection)
 
 
-#### Model building
+### Model building
 A norm when training machine learning models is to train several versions of the model for quality and testing purposes.  
 For this purpose, I trained three CNNs for brain tumour classification.<br>
 The first model was built as a binary classification. The output layer has one neuron activated by a sigmoid function. I stacked 6 concolution layers, one fully connected dense layer and a final output layer. The model achieved 97.70% testing accuracy.<br>
@@ -14,9 +14,9 @@ The third CNN was modelled employing __transfer learning__. I employed the __VGG
 The notebooks for training these models are available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/notebooks). The trained models were saved and exported and are available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/saved_models).
 
 
-#### React JS web app
+### React JS web app
 A react web app for brain tumour diagnosis was developed using these pretrained models.  
-The web app is designed as a drag and drop architecture: You can drag and drop and image of a Brain MRI scan, and readily get a diagnosis result, i.e tumour classification and classification probabilty.<br>. 
+The web app is designed as a drag and drop architecture: You can drag and drop and image of a Brain MRI scan, and readily get a diagnosis result, i.e tumour classification and classification probabilty.<br>  
 The entire source code used to develop this React web app is available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/client).
 
 
