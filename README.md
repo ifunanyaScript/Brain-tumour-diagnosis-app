@@ -20,6 +20,10 @@ The web app is designed as a drag and drop architecture: You can drag and drop a
 The entire source code used to develop this React web app is available [here](https://github.com/ifunanyaScript/Brain-tumour-diagnosis-app/tree/main/client).
 
 
-#### React Native mobile app
+### React Native mobile app
 A fully functional react native app for brain tumour diagnosis.
-This mobile app is a step up of the web app. It also adopts a similar architecture
+This mobile app is a step up of the web app. It also adopts a similar architecture with a caveat: 
+Using the mobile phone's camera, one can take a picture of a brain MRI scan and readily get a diagnosis result. Alternatively, one can select a picture of a brain MRI from the phone's file manager and also get a diagnosis result.<br>  
+The source codes used to develop this React Native mobile app is available [here]().<br>  
+<br>
+
